@@ -71,14 +71,14 @@ RegisterServerEvent('mr-lumberjack:recivelumber', function()
     local source = source
     local Player = QBCore.Functions.GetPlayer(tonumber(source))
     local lumber = math.random(Lumber.LumberAmount_Min, Lumber.LumberAmount_Max)
-    Player.Functions.AddItem('lumber', lumber)
-    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['lumber'], "add")
+    Player.Functions.AddItem('tree_lumber', lumber)
+    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['tree_lumber'], "add")
 end)
 
 QBCore.Functions.CreateCallback('mr-lumberjack:lumber', function(source, cb)
     local Player = QBCore.Functions.GetPlayer(source)
     if Player ~= nil then
-        if Player.Functions.GetItemByName("lumber") ~= nil then
+        if Player.Functions.GetItemByName("tree_lumber") ~= nil then
             cb(true)
         else
             cb(false)
@@ -89,7 +89,7 @@ end)
 RegisterServerEvent('mr-lumberjack:lumberprocessed', function()
     local source = source
     local Player = QBCore.Functions.GetPlayer(tonumber(source))
-    local lumber = Player.Functions.GetItemByName('lumber')
+    local lumber = Player.Functions.GetItemByName('tree_lumber')
     local TradeAmount = math.random(Lumber.TradeAmount_Min, Lumber.TradeAmount_Max)
     local TradeRecevied = math.random(Lumber.TradeRecevied_Min, Lumber.TradeRecevied_Max)
     if not lumber then 
@@ -104,14 +104,14 @@ RegisterServerEvent('mr-lumberjack:lumberprocessed', function()
       return false
     end
     
-    if not Player.Functions.RemoveItem('lumber', amount) then 
+    if not Player.Functions.RemoveItem('tree_lumber', amount) then 
         TriggerClientEvent('QBCore:Notify', source, Config.Alerts['itemamount'])
         return false 
     end
 
-    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['lumber'], "remove")
+    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['tree_lumber'], "remove")
     TriggerClientEvent('QBCore:Notify', source, Config.Alerts["lumber_processed_trade"] ..TradeAmount.. Config.Alerts["lumber_processed_lumberamount"] ..TradeRecevied.. Config.Alerts["lumber_processed_received"])
     Wait(750)
-    Player.Functions.AddItem('woodplank', TradeRecevied)
-    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['woodplank'], "add")
+    Player.Functions.AddItem('wood_plank', TradeRecevied)
+    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['wood_plank'], "add")
 end)
