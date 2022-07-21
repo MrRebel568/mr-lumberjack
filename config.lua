@@ -49,10 +49,10 @@ Lumber = {
 }
 
 Config.Sell = {
-    ["lumber"] = {
+    ["tree_lumber"] = {
         ["price"] = math.random(45, 60)                   -- Seller Price
     },
-    ["woodplank"] = {
+    ["wood_plank"] = {
         ["price"] = math.random(65, 100)
     },
 }
