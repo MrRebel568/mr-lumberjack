@@ -18,10 +18,10 @@ Add the item to your **qb-core/shared/item.lua**
 For move the images from images folder to your inventory folder **mr-inventory/html/images**
 
 ## Preview Pictures
-![Preview Screenshot](https://imgur.com/FQ1E6la)
-![Preview Screenshot](https://imgur.com/2fY1ypI)
-![Preview Screenshot](https://imgur.com/LeOw96D)
-![Preview Screenshot](https://imgur.com/W5W1NK7)
+![Preview Screenshot](https://imgur.com/FQ1E6la.jpeg)
+![Preview Screenshot](https://imgur.com/2fY1ypI.jpeg)
+![Preview Screenshot](https://imgur.com/LeOw96D.jpeg)
+![Preview Screenshot](https://imgur.com/W5W1NK7.jpeg)
 
 
 ## Discord
