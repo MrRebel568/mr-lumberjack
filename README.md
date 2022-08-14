@@ -1,5 +1,5 @@
 # mr-lumberjack
-LumberJack Script for QBCore
+LumberJack script for QBCore Reupload
 
 ## Dependencies
 - [qb-core](https://github.com/qbcore-framework/qb-core)
