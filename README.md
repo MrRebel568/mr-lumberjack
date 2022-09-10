@@ -25,7 +25,7 @@ For move the images from images folder to your inventory folder **mr-inventory/h
 
 
 ## Discord
-- [Join Discord](https://discord.gg/WKhp38uc7Y)
+- [Join Discord](https://discord.gg/XpdWyyT4Nm)
 
 If you need any help join my discord server
 
